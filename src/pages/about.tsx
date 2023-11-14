@@ -33,7 +33,7 @@ const About = () => {
                 and I am a computer science student at the USTHB
               </li>
               <li>
-                I'm also a junior front-end developer . I like development
+                I am also a junior front-end developer . I like development
                 because of the satisfaction I get from overcoming challenges
               </li>
               <li>I am very motivated to improve my knowledge and skills.</li>

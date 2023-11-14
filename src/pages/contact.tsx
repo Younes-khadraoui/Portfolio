@@ -50,8 +50,9 @@ const Contact = () => {
             <p>(+213) 781 041 216</p>
           </div>
           <p className="text">
-            Thank you for visiting my portfolio. <br /> I'm excited to hear from
-            you and discuss potential opportunities or collaborations. <br />
+            Thank you for visiting my portfolio. <br /> I am excited to hear
+            from you and discuss potential opportunities or collaborations.{" "}
+            <br />
             Please feel free to reach out using the contact information below
           </p>
         </div>
