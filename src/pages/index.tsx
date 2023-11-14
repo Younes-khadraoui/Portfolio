@@ -11,7 +11,7 @@ export default function Home() {
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-        className="lg:grid lg:grid-cols-2 pointer-events h-screen"
+        className="lg:grid lg:grid-cols-2 pointer-events lg:h-screen "
       >
         <div className="order-2 flex items-center justify-center">
           <Dev />
