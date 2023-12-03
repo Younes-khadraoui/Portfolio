@@ -1,4 +1,5 @@
 import menu from "../assets/menu.svg";
+import quit from "../assets/quit.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -6,8 +7,13 @@ import Link from "next/link";
 
 const Header = () => {
   const [toggled, setToggled] = useState(false);
-  const handleLinkClick = () => {
-    setToggled(false);
+  const [Icon, setIcon] = useState(menu);
+  const navStyle = {
+    className: `font-bold lg:gap-4 lg:text-2xl lg:flex lg:justify-center cursor-default ${
+      toggled
+        ? "bg-black bg-opacity-90 flex fixed bottom-0 left-0 flex-col w-full h-screen gap-14 text-3xl justify-center items-center lg:hidden"
+        : "Links hidden lg:flex"
+    }`,
   };
 
   return (
@@ -28,12 +34,16 @@ const Header = () => {
         </motion.p>
       </Link>
 
-      <ul className="Links hidden font-bold || lg:gap-4 lg:text-2xl lg:flex lg:justify-center cursor-default">
+      <ul className={navStyle.className}>
         <motion.li
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{
             duration: 0.2,
+          }}
+          onClick={() => {
+            toggled ? setToggled(false) : null;
+            setIcon(Icon == quit ? menu : quit);
           }}
         >
           <Link href="/">Home</Link>
@@ -44,6 +54,10 @@ const Header = () => {
           transition={{
             duration: 0.2,
           }}
+          onClick={() => {
+            toggled ? setToggled(false) : null;
+            setIcon(Icon == quit ? menu : quit);
+          }}
         >
           <Link href="/projects">Projects</Link>
         </motion.li>
@@ -52,6 +66,10 @@ const Header = () => {
           whileTap={{ scale: 0.9 }}
           transition={{
             duration: 0.2,
+          }}
+          onClick={() => {
+            toggled ? setToggled(false) : null;
+            setIcon(Icon == quit ? menu : quit);
           }}
         >
           <Link href="/about">About</Link>
@@ -62,45 +80,23 @@ const Header = () => {
           transition={{
             duration: 0.2,
           }}
+          onClick={() => {
+            toggled ? setToggled(false) : null;
+            setIcon(Icon == quit ? menu : quit);
+          }}
         >
           <Link href="/contact">Contact</Link>
         </motion.li>
       </ul>
 
-      <>
-        {toggled && (
-          <motion.ul className="bg-black flex fixed bottom-0 left-0 flex-col w-full h-screen gap-14 text-3xl justify-center items-center || lg:hidden">
-            <li>
-              <Link href="/" onClick={handleLinkClick}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/projects" onClick={handleLinkClick}>
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" onClick={handleLinkClick}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" onClick={handleLinkClick}>
-                Contact
-              </Link>
-            </li>
-          </motion.ul>
-        )}
-      </>
-
       <button
         className="flex justify-end z-20 || lg:hidden"
         onClick={() => {
           setToggled(!toggled);
+          setIcon(Icon == quit ? menu : quit);
         }}
       >
-        <Image className="w-10" src={menu} alt="burger menu button" />
+        <Image className="w-10" src={Icon} alt="burger menu button" />
       </button>
     </motion.div>
   );
