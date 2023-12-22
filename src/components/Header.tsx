@@ -24,7 +24,7 @@ const Header = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link href="/" className="text-3xl lg:text-4xl Logo z-20">
+      <Link href="/" className="text-3xl  z-20 || lg:text-4xl || xl:text-5xl">
         <motion.p
           whileHover={{ color: "#42A5F5" }}
           whileTap={{ scale: 0.9 }}
@@ -46,7 +46,9 @@ const Header = () => {
             setIcon(Icon == quit ? menu : quit);
           }}
         >
-          <Link href="/">Home</Link>
+          <Link href="/" className="xl:text-3xl">
+            Home
+          </Link>
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.1 }}
@@ -59,7 +61,9 @@ const Header = () => {
             setIcon(Icon == quit ? menu : quit);
           }}
         >
-          <Link href="/projects">Projects</Link>
+          <Link href="/projects" className="xl:text-3xl">
+            Projects
+          </Link>
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.1 }}
@@ -72,7 +76,9 @@ const Header = () => {
             setIcon(Icon == quit ? menu : quit);
           }}
         >
-          <Link href="/about">About</Link>
+          <Link href="/about" className="xl:text-3xl">
+            About
+          </Link>
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.1 }}
@@ -85,7 +91,9 @@ const Header = () => {
             setIcon(Icon == quit ? menu : quit);
           }}
         >
-          <Link href="/contact">Contact</Link>
+          <Link href="/contact" className="xl:text-3xl">
+            Contact
+          </Link>
         </motion.li>
       </ul>
 

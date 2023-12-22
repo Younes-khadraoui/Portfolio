@@ -1,8 +1,7 @@
 import Dev from "@/components/Dev";
-import quote from "../assets/quote.png";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import { Quote } from "lucide-react";
 
 export default function Home() {
   return (
@@ -11,31 +10,39 @@ export default function Home() {
         initial={{ y: -1000 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-        className="lg:grid lg:grid-cols-2 pointer-events lg:h-screen "
+        className="pointer-events || lg:h-screen lg:grid lg:grid-cols-2 "
       >
+        {/*  the dev animation  */}
         <div className="order-2 flex items-center justify-center">
           <Dev />
         </div>
-        <div className="lg:flex lg:flex-col lg:justify-center lg:pl-16">
+        {/*  the text part   */}
+        <div className="md:pl-32 || lg:flex lg:flex-col lg:justify-center lg:pl-16 || xl:pl-36">
+          {/*  the titles */}
           <div className="p-5">
-            <h1 className="text-2xl lg:text-3xl font-bold font-marcellus">
+            <h1 className="text-2xl font-bold font-marcellus || lg:text-3xl || xl:text-4xl">
               I am Younes Khadraoui
             </h1>
-            <h2 className="text-3xl lg:text-4xl font-bold font-marcellus">
+            <h2 className="text-3xl font-bold font-marcellus || lg:text-4xl  || xl:text-5xl">
               I am a web developer
             </h2>
           </div>
+          {/*  the quote and buttons   */}
           <div className="p-5">
             <div className="flex gap-2">
-              <Image className="h-10 w-10" src={quote} alt="quote image" />
+              <div className="pt-1">
+                <Quote />
+              </div>
               <div>
-                <p className="text-lg lg:text-2xl">
+                <p className="text-lg  || lg:text-2xl || xl:text-3xl">
                   Creativity is intelligence having fun
                 </p>
-                <p className="font-bold text-blue-400"> - Albert Einstein</p>
+                <p className="font-bold text-blue-400 || xl:text-lg">
+                  - Albert Einstein
+                </p>
               </div>
             </div>
-            <p className="pt-4">
+            <p className="pt-4 || xl:text-lg">
               Hello, cyber travelers! Buckle up for a whimsical ride through my
               digital universe!
             </p>

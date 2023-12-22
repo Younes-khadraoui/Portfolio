@@ -17,7 +17,7 @@ const About = () => {
         <h1 className="text-5xl mb-4 py-8 font-marcellus">About</h1>
         <hr className="lg:w-1/2" />
       </div>
-
+      {/* My description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="descreption">
           <p className="title text-3xl py-6 font-marcellus">My Description</p>
@@ -25,7 +25,7 @@ const About = () => {
             <Image
               className="border-4 h-64 object-scale-down bg-white"
               src={me}
-              alt=""
+              alt="my picture"
             />
             <ul className="flex flex-col gap-6">
               <li>
@@ -40,9 +40,10 @@ const About = () => {
             </ul>
           </div>
         </div>
-        <div className="skills mt-16 lg:mt-0">
+        {/* My Skills */}
+        <div className="mt-16 lg:mt-0">
           <p className="text-3xl py-6 font-marcellus">My Skills</p>
-          <div className="content flex flex-col gap-6">
+          <div className="content flex  flex-col  gap-6 md:flex-row lg:flex-col">
             <ul className="flex flex-col gap-6">
               <li>Most of these skills are self learned skills </li>
               <li>
@@ -54,7 +55,7 @@ const About = () => {
                 you can find about in my linkedin profile
               </li>
             </ul>
-            <div className="flex h-16 justify-between">
+            <div className="flex h-16 ">
               <Image className="w-16" src={html} alt="HTML" />
               <Image className="w-16" src={react} alt="react js" />
               <Image className="w-16" src={ts} alt="typesctipt" />
