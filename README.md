@@ -1,6 +1,6 @@
-# My Portfolio 🪴
+# My Portfolio 💻
 ## Short descreption 😍
-this is my portfolio i created using NextJs with typescript and tailwind
+This is my portfolio i created using NextJs with typescript and tailwind
 ## The link to try it 😊
 [My Portfolio](https://younes-khx.vercel.app/)
 ## Preview to the website 😁
