@@ -1,9 +1,6 @@
-import line from "../assets/line.svg";
-import twitter from "../assets/twitter.svg";
-import github from "../assets/github.svg";
-import linkedin from "../assets/linkedin.svg";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Minus, Github, Linkedin, Twitter } from "lucide-react";
+
 const Footer = () => {
   return (
     <motion.div
@@ -11,18 +8,14 @@ const Footer = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="flex gap-2 items-center justify-center py-8 lg:absolute lg:left-0 lg:top-0 lg:flex-col lg:p-4 lg:h-screen lg:w-20 lg:gap-10 "
+      className="flex gap-2 items-center justify-center py-8 || lg:absolute lg:left-0 lg:top-0 lg:flex-col lg:p-4 lg:h-screen lg:w-20 lg:gap-10 "
     >
       <div className="Follow flex gap-2 || lg:transform lg:rotate-90 lg:pr-6">
-        <p className="text-xl lg:text-lg font-bold">Follow</p>
-        <p className="text-xl lg:text-lg font-bold">me</p>
+        <p className="text-xl lg:text-lg font-bold || xl:text-2xl">Follow</p>
+        <p className="text-xl lg:text-lg font-bold || xl:text-2xl">me</p>
       </div>
-      <div className="Line flex items-center || lg:items-center">
-        <Image
-          className="w-10 lg:transform lg:rotate-90"
-          src={line}
-          alt="a line"
-        />
+      <div className="flex items-center || lg:items-center">
+        <Minus className="w-10 lg:transform lg:rotate-90" />
       </div>
       <ul className="Socials flex gap-2 || lg:flex-col lg:items-center lg:w-10">
         <motion.li
@@ -33,7 +26,7 @@ const Footer = () => {
           }}
         >
           <a href="https://github.com/Younes-khadraoui" target="_blank">
-            <Image src={github} alt="github image" />
+            <Github />
           </a>
         </motion.li>
         <motion.li
@@ -47,7 +40,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/younes-khadraoui/"
             target="_blank"
           >
-            <Image src={linkedin} alt="linkedin image" />
+            <Linkedin />
           </a>
         </motion.li>
         <motion.li
@@ -58,7 +51,7 @@ const Footer = () => {
           }}
         >
           <a href="https://twitter.com/youneskhadraou4" target="_blank">
-            <Image src={twitter} alt="twitter image" />
+            <Twitter />
           </a>
         </motion.li>
       </ul>
