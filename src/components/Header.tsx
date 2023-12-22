@@ -29,6 +29,7 @@ const Header = () => {
           whileHover={{ color: "#42A5F5" }}
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.2 }}
+          className="font-anton"
         >
           Younes
         </motion.p>

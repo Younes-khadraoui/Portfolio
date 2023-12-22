@@ -11,28 +11,30 @@ const Project = ({ preview, name, tech }) => {
         alt="my weather website"
       />
       <div className="content opacity-0 hover:opacity-100 transition-opacity duration-500 absolute inset-0 m-6 p-2 pt-4 bg-black bg-opacity-60  flex flex-col justify-center gap-4 ">
-        <p className="text-center font-marcellus text-2xl">{name}</p>
-        <p className="font-bold text-center">{tech}</p>
+        <p className="text-center font-marcellus text-2xl || xl:text-3xl">
+          {name}
+        </p>
+        <p className="font-bold text-center || xl:text-xl">{tech}</p>
         <div className="flex gap-4 justify-center">
           <div className="flex gap-1">
             <a
-              className="hover:underline px-2 py-1"
+              className="hover:underline px-2 py-1 || xl:text-lg"
               href="https://github.com/Younes-khadraoui/Weather-app"
               target="_blank"
             >
               Code
             </a>
-            <Github />
+            <Github className="pt-1" />
           </div>
           <div className="flex gap-1">
             <a
-              className="hover:underline px-2 py-1"
+              className="hover:underline px-2 py-1  || xl:text-lg"
               href="https://weathercasts.vercel.app/"
               target="_blank"
             >
               Live preview
             </a>
-            <ExternalLink />
+            <ExternalLink className="pt-1" />
           </div>
         </div>
       </div>

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         marcellus: ["Marcellus", "serif"],
+        anton: ["Anton", "sans-serif"],
       },
     },
   },
