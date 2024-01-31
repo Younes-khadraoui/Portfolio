@@ -10,7 +10,7 @@ const Projects = () => {
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-      className="pt-20 p-10 flex flex-col gap-24 lg:pl-20"
+      className="pt-20 p-10 flex flex-col gap-24 lg:pt-0 lg:px-40 lg:justify-center lg:h-screen"
     >
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Projects</h1>
@@ -22,9 +22,23 @@ const Projects = () => {
           preview={plants}
           name="plants kingdom"
           tech="ReactJs Typescript"
+          git="Plant-store"
+          href="https://plant-kingdom.netlify.app/"
         />
-        <Project preview={weather} name="Weather Cast" tech="ReactJs RestApi" />
-        <Project preview={icarus} name="Nasa Icarus" tech="Js vanillaCSS" />
+        <Project
+          preview={weather}
+          name="Weather Cast"
+          tech="ReactJs RestApi"
+          git="WeatherCast"
+          href="https://weathercasts.vercel.app/"
+        />
+        <Project
+          preview={icarus}
+          name="Nasa Icarus"
+          tech="Js vanillaCSS"
+          git="icarus"
+          href="https://icarusnasa.netlify.app/#3"
+        />
       </div>
     </motion.div>
   );

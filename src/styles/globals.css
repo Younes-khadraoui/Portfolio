@@ -4,8 +4,15 @@
 
 body {
   margin: 0;
-  background-color: #0c0c0c;
   color: white;
   font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial",
     "Lucida Grande";
+  min-height: 100vh;
+  background-color: #0c0c0c;
+}
+
+@media (min-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
 }
