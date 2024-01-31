@@ -11,7 +11,7 @@ const About = () => {
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-      className="pt-20 p-10 flex flex-col gap-16 lg:pl-20"
+      className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
     >
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus ">About</h1>

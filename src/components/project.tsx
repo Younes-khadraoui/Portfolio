@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 
-const Project = ({ preview, name, tech }) => {
+const Project = ({ preview, name, tech, git, href }) => {
   return (
     <div className="relative bg-white">
       <Image
@@ -19,7 +19,7 @@ const Project = ({ preview, name, tech }) => {
           <div className="flex gap-1">
             <a
               className="hover:underline px-2 py-1 || xl:text-lg"
-              href="https://github.com/Younes-khadraoui/Weather-app"
+              href={`https://github.com/Younes-khadraoui/${git}/`}
               target="_blank"
             >
               Code
@@ -29,7 +29,7 @@ const Project = ({ preview, name, tech }) => {
           <div className="flex gap-1">
             <a
               className="hover:underline px-2 py-1  || xl:text-lg"
-              href="https://weathercasts.vercel.app/"
+              href={href}
               target="_blank"
             >
               Live preview

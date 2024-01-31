@@ -27,7 +27,7 @@ const Contact = () => {
       initial={{ y: -1000 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-      className="pt-20 p-10 flex flex-col gap-24 lg:pl-20"
+      className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
     >
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
@@ -64,7 +64,7 @@ const Contact = () => {
             <div className="flex flex-col lg:flex-row gap-4">
               <input
                 {...register("name", { required: true })}
-                className="bg-black border p-3 w-full"
+                className=" bg-transparent border p-3 w-full"
                 placeholder="Name"
                 type="text"
               />
@@ -73,7 +73,7 @@ const Contact = () => {
               )}
               <input
                 {...register("email", { required: true })}
-                className="bg-black border p-3 w-full"
+                className="bg-transparent border p-3 w-full"
                 placeholder="Email"
                 type="email"
               />
@@ -83,15 +83,19 @@ const Contact = () => {
             </div>
             <textarea
               {...register("message", { required: true })}
-              className="bg-black border p-3"
+              className="bg-transparent border p-3"
               placeholder="Message"
               cols={30}
               rows={7}
             ></textarea>
             {errors.message && (
-              <span className="text-red-500">Text message is required</span>
+              <>
+                <br />
+                <br />
+                <span className="text-red-500">Text message is required</span>
+              </>
             )}
-            <button className="bg-black p-2 border-2 w-24" type="submit">
+            <button className="bg-transparent p-2 border-2 w-24" type="submit">
               Send
             </button>
           </form>

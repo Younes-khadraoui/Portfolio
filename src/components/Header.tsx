@@ -24,7 +24,7 @@ const Header = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link href="/" className="text-3xl  z-20 || lg:text-4xl || xl:text-5xl">
+      <Link href="/" className="text-4xl z-20 || xl:text-5xl">
         <motion.p
           whileHover={{ color: "#42A5F5" }}
           whileTap={{ scale: 0.9 }}
