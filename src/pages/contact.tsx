@@ -2,6 +2,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FieldValues } from "react-hook-form";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -19,7 +20,27 @@ const Contact = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = (data: FieldValues) => {
-    console.log("Submitting the data", data);
+    const templateParams = {
+      from_name: data.name,
+      message: data.message,
+      reply_to: data.email,
+    };
+    console.log(data);
+    emailjs
+      .send(
+        "service_f5k9vc3",
+        "template_rlb8ack",
+        templateParams,
+        "VCkKV2a40vQcZlQQV"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -28,6 +49,7 @@ const Contact = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
       className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
+      onSubmit={handleSubmit(onSubmit)}
     >
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
