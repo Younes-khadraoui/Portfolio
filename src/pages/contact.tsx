@@ -3,6 +3,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FieldValues } from "react-hook-form";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -13,6 +16,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
@@ -20,27 +24,25 @@ const Contact = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = (data: FieldValues) => {
+    setLoading(true);
     const templateParams = {
       from_name: data.name,
       message: data.message,
       reply_to: data.email,
     };
-    console.log(data);
-    emailjs
-      .send(
+    toast.promise(
+      emailjs.send(
         "service_f5k9vc3",
         "template_rlb8ack",
         templateParams,
         "VCkKV2a40vQcZlQQV"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      ),
+      {
+        pending: "Sending email...",
+        success: "Email sent successfully",
+        error: "There was an error sending the email!",
+      }
+    );
   };
 
   return (
@@ -49,8 +51,8 @@ const Contact = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
       className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
-      onSubmit={handleSubmit(onSubmit)}
     >
+      <ToastContainer position="top-center" theme="dark" />
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
         <hr className="lg:w-1/2" />
