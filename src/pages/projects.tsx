@@ -23,7 +23,7 @@ const Projects = () => {
           name="plants kingdom"
           tech="ReactJs Typescript"
           git="Plant-store"
-          href="https://plant-kingdom.netlify.app/"
+          href="https://plants-kingdom.vercel.app/"
         />
         <Project
           preview={weather}
