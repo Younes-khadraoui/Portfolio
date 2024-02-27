@@ -4,13 +4,18 @@ import ts from "../assets/ts.png";
 import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
 import Image from "next/image";
+import Head from "next/head";
 
 const About = () => {
   return (
     <div className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center">
+      <Head>
+        <title>About</title>
+      </Head>
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus ">About</h1>
         <hr className="lg:w-1/2" />
+        MHead
       </div>
       {/* My description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

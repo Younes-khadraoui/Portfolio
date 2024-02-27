@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -44,6 +45,9 @@ const Contact = () => {
 
   return (
     <div className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center">
+      <Head>
+        <title>Contact</title>
+      </Head>
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
         <hr className="lg:w-1/2" />

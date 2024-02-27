@@ -25,7 +25,11 @@ const Footer = () => {
             duration: 0.2,
           }}
         >
-          <a href="https://github.com/Younes-khadraoui" target="_blank">
+          <a
+            href="https://github.com/Younes-khadraoui"
+            target="_blank"
+            title="github"
+          >
             <Github />
           </a>
         </motion.li>
@@ -39,6 +43,7 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/younes-khadraoui/"
             target="_blank"
+            title="Linkedin"
           >
             <Linkedin />
           </a>

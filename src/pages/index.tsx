@@ -2,10 +2,14 @@ import Dev from "@/components/Dev";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Quote } from "lucide-react";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>Younes</title>
+      </Head>
       <div className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
         <div className="order-2 flex items-center justify-center">
