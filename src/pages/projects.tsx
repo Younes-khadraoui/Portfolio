@@ -13,7 +13,6 @@ const Projects = () => {
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Projects</h1>
         <hr className="lg:w-1/2" />
-        MH
       </div>
 
       <div className="grid lg:grid-cols-3 gap-4">

@@ -15,7 +15,6 @@ const About = () => {
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus ">About</h1>
         <hr className="lg:w-1/2" />
-        MHead
       </div>
       {/* My description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
