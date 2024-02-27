@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center">
+    <div className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center">
       <div className="Title">
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
         <hr className="lg:w-1/2" />

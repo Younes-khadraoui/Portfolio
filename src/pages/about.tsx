@@ -54,7 +54,7 @@ const About = () => {
                 you can find about in my linkedin profile
               </li>
             </ul>
-            <div className="flex h-16 justify-around">
+            <div className="flex h-16 justify-around flex-wrap gap-4">
               <Image className="w-16" src={html} alt="HTML" />
               <Image className="w-16" src={react} alt="react js" />
               <Image className="w-16" src={ts} alt="typesctipt" />
