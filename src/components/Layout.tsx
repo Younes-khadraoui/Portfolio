@@ -11,7 +11,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div>
       <Header />
-      <Meteors number={20} />
+      <Meteors className="fixed top-0 left-0 " number={30} />
       <motion.main
         initial={{ y: -1000 }}
         animate={{ y: 0 }}

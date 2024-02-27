@@ -43,17 +43,6 @@ const Footer = () => {
             <Linkedin />
           </a>
         </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 0.2,
-          }}
-        >
-          <a href="https://twitter.com/youneskhadraou4" target="_blank">
-            <Twitter />
-          </a>
-        </motion.li>
       </ul>
     </motion.div>
   );
