@@ -6,12 +6,7 @@ import { Quote } from "lucide-react";
 export default function Home() {
   return (
     <main>
-      <motion.div
-        initial={{ y: -1000 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5, type: "spring", stiffness: 40 }}
-        className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2"
-      >
+      <div className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
         <div className="order-2 flex items-center justify-center">
           <Dev />
@@ -70,7 +65,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 }
