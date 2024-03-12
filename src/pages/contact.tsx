@@ -1,11 +1,11 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FieldValues } from "react-hook-form";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -44,7 +44,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center">
+    <motion.div
+      className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Head>
         <title>Contact</title>
       </Head>
@@ -121,7 +126,7 @@ const Contact = () => {
         </div>
       </div>
       <ToastContainer position="top-center" theme="dark" />
-    </div>
+    </motion.div>
   );
 };
 

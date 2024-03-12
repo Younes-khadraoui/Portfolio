@@ -18,20 +18,20 @@ const Header = () => {
 
   return (
     <motion.div
-      className="Header flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus "
+      className="Header flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <Link href="/" className="text-4xl z-20 || xl:text-5xl">
+      <Link href="/" className="text-4xl sm:text-5xl z-20 || xl:text-6xl">
         <motion.p
-          whileHover={{ color: "#42A5F5" }}
           whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.2 }}
-          className="font-anton"
+          transition={{ duration: 0.3 }}
+          className="font-tinos outline-none hover:text-[#42A5F5]"
         >
-          Younes
+          <span>Y</span>
+          <span className="hover:text-white">ounes</span>
         </motion.p>
       </Link>
 
@@ -40,7 +40,7 @@ const Header = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{
-            duration: 0.2,
+            duration: 0.3,
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
@@ -55,7 +55,7 @@ const Header = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{
-            duration: 0.2,
+            duration: 0.3,
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
@@ -70,7 +70,7 @@ const Header = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{
-            duration: 0.2,
+            duration: 0.3,
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
@@ -85,7 +85,7 @@ const Header = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{
-            duration: 0.2,
+            duration: 0.3,
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
@@ -98,15 +98,20 @@ const Header = () => {
         </motion.li>
       </ul>
 
-      <button
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{
+          duration: 0.3,
+        }}
         className="flex justify-end z-20 || lg:hidden"
         onClick={() => {
           setToggled(!toggled);
           setIcon(Icon == quit ? menu : quit);
         }}
       >
-        <Image className="w-10" src={Icon} alt="burger menu button" />
-      </button>
+        <Image className="w-11 sm:w-14" src={Icon} alt="burger menu button" />
+      </motion.button>
     </motion.div>
   );
 };

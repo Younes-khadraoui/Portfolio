@@ -5,10 +5,16 @@ import react from "../assets/react.png";
 import tailwind from "../assets/tailwind.png";
 import Image from "next/image";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center">
+    <motion.div
+      className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Head>
         <title>About</title>
       </Head>
@@ -67,7 +73,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

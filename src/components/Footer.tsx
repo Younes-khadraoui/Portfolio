@@ -10,9 +10,9 @@ const Footer = () => {
       transition={{ duration: 0.5 }}
       className="flex gap-2 items-center justify-center py-8 || lg:absolute lg:left-0 lg:top-0 lg:flex-col lg:p-4 lg:h-screen lg:w-20 lg:gap-10 "
     >
-      <div className="Follow flex gap-2 || lg:transform lg:rotate-90 lg:pr-6">
-        <p className="text-xl lg:text-lg font-bold || xl:text-2xl">Follow</p>
-        <p className="text-xl lg:text-lg font-bold || xl:text-2xl">me</p>
+      <div className="Follow flex gap-2 || lg:transform lg:rotate-90 lg:pr-6 text-2xl lg:text-lg font-bold || xl:text-2xl">
+        <p>Follow</p>
+        <p>me</p>
       </div>
       <div className="flex items-center || lg:items-center">
         <Minus className="w-10 lg:transform lg:rotate-90" />

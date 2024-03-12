@@ -6,13 +6,17 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <main>
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Head>
         <title>Younes</title>
       </Head>
       <div className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
-        <div className="order-2 flex items-center justify-center">
+        <div className="order-2 flex items-center justify-center min-h-fit">
           <Dev />
         </div>
         {/*  the text part   */}
@@ -70,6 +74,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }

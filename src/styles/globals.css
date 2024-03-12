@@ -10,9 +10,3 @@ body {
   min-height: 100vh;
   background-color: #0c0c0c;
 }
-
-@media (min-width: 1000px) {
-  body {
-    overflow: hidden;
-  }
-}

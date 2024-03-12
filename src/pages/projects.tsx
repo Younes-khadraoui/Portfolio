@@ -3,10 +3,16 @@ import weather from "../assets/weather.png";
 import icarus from "../assets/icarus.png";
 import Project from "@/components/project";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="pt-20 p-10 flex flex-col gap-24 lg:pt-0 lg:px-40 lg:justify-center lg:h-screen">
+    <motion.div
+      className="pt-20 p-10 flex flex-col gap-24 lg:pt-0 lg:px-40 lg:justify-center lg:h-screen"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Head>
         <title>Projects</title>
       </Head>
@@ -26,8 +32,8 @@ const Projects = () => {
         <Project
           preview={weather}
           name="Weather Cast"
-          tech="ReactJs RestApi"
-          git="WeatherCast"
+          tech="NextJs RestApi"
+          git="weather-cast"
           href="https://weathercasts.vercel.app/"
         />
         <Project
@@ -38,7 +44,7 @@ const Projects = () => {
           href="https://icarusnasa.netlify.app/#3"
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

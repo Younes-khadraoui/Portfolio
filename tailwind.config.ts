@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         marcellus: ["Marcellus", "serif"],
         anton: ["Anton", "sans-serif"],
+        tinos : ["Tinos", "serif"],
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
