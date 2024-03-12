@@ -54,7 +54,7 @@ export default function Home() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  duration: 0.2,
+                  duration: 0.3,
                 }}
                 className="bg-white font-bold border-2 px-2 py-1 text-black  mr-5 cursor-default"
               >
@@ -64,7 +64,7 @@ export default function Home() {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{
-                  duration: 0.2,
+                  duration: 0.3,
                 }}
                 className="border-2 px-2 py-1 font-bold cursor-default"
               >
