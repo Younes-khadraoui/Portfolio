@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Minus, Github, Linkedin, Twitter } from "lucide-react";
+import { Minus, Github, Linkedin, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -25,13 +26,13 @@ const Footer = () => {
             duration: 0.2,
           }}
         >
-          <a
+          <Link
             href="https://github.com/Younes-khadraoui"
             target="_blank"
             title="github"
           >
             <Github />
-          </a>
+          </Link>
         </motion.li>
         <motion.li
           whileHover={{ scale: 1.2 }}
@@ -40,13 +41,28 @@ const Footer = () => {
             duration: 0.2,
           }}
         >
-          <a
+          <Link
             href="https://www.linkedin.com/in/younes-khadraoui/"
             target="_blank"
             title="Linkedin"
           >
             <Linkedin />
-          </a>
+          </Link>
+        </motion.li>
+        <motion.li
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{
+            duration: 0.2,
+          }}
+        >
+          <Link
+            href="https://discord.com/users/younes_khadraoui"
+            target="_blank"
+            title="Discord"
+          >
+            <MessageCircle />
+          </Link>
         </motion.li>
       </ul>
     </motion.div>

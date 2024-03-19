@@ -1,13 +1,11 @@
-import menu from "../assets/menu.svg";
-import quit from "../assets/quit.svg";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [toggled, setToggled] = useState(false);
-  const [Icon, setIcon] = useState(menu);
+  const [Icon, setIcon] = useState(true);
   const navStyle = {
     className: `font-bold lg:gap-4 lg:text-2xl lg:flex lg:justify-center cursor-default ${
       toggled
@@ -44,7 +42,7 @@ const Header = () => {
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
-            setIcon(Icon == quit ? menu : quit);
+            setIcon(Icon == false ? true : false);
           }}
         >
           <Link href="/" className="xl:text-3xl">
@@ -59,7 +57,7 @@ const Header = () => {
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
-            setIcon(Icon == quit ? menu : quit);
+            setIcon(Icon == false ? true : false);
           }}
         >
           <Link href="/projects" className="xl:text-3xl">
@@ -74,7 +72,7 @@ const Header = () => {
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
-            setIcon(Icon == quit ? menu : quit);
+            setIcon(Icon == false ? true : false);
           }}
         >
           <Link href="/about" className="xl:text-3xl">
@@ -89,7 +87,7 @@ const Header = () => {
           }}
           onClick={() => {
             toggled ? setToggled(false) : null;
-            setIcon(Icon == quit ? menu : quit);
+            setIcon(Icon == false ? true : false);
           }}
         >
           <Link href="/contact" className="xl:text-3xl">
@@ -107,10 +105,10 @@ const Header = () => {
         className="flex justify-end z-20 || lg:hidden"
         onClick={() => {
           setToggled(!toggled);
-          setIcon(Icon == quit ? menu : quit);
+          setIcon(Icon == false ? true : false);
         }}
       >
-        <Image className="w-11 sm:w-14" src={Icon} alt="burger menu button" />
+        {Icon ? <Menu size={45} /> : <X size={45} />}
       </motion.button>
     </motion.div>
   );

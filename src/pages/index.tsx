@@ -1,8 +1,9 @@
-import Dev from "@/components/Dev";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import Head from "next/head";
+import Lottie from "lottie-react";
+import dev from "../assets/dev.json";
 
 export default function Home() {
   return (
@@ -16,8 +17,8 @@ export default function Home() {
       </Head>
       <div className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
-        <div className="order-2 flex items-center justify-center min-h-fit">
-          <Dev />
+        <div className="order-2 flex items-center justify-center min-h-[500px]">
+          <Lottie animationData={dev} loop={true} />
         </div>
         {/*  the text part   */}
         <div className="md:pl-32 || lg:flex lg:flex-col lg:justify-center lg:pl-16 || xl:pl-36">
@@ -50,26 +51,12 @@ export default function Home() {
               digital universe!
             </p>
             <div className="py-5 ">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{
-                  duration: 0.3,
-                }}
-                className="bg-white font-bold border-2 px-2 py-1 text-black  mr-5 cursor-default"
-              >
+              <button className="bg-white font-bold border-2 px-2 py-1 text-black  mr-5 cursor-default">
                 <Link href="/projects">My Projects</Link>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{
-                  duration: 0.3,
-                }}
-                className="border-2 px-2 py-1 font-bold cursor-default"
-              >
+              </button>
+              <button className="border-2 px-2 py-1 font-bold cursor-default">
                 <Link href="/contact">Contact Me</Link>
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>

@@ -86,24 +86,28 @@ const Contact = () => {
             onSubmit={handleSubmit(onSubmit)}
           >
             <div className="flex flex-col lg:flex-row gap-4">
-              <input
-                {...register("name", { required: true })}
-                className=" bg-transparent border p-3 w-full"
-                placeholder="Name"
-                type="text"
-              />
-              {errors.name && (
-                <span className="text-red-500">Name is required</span>
-              )}
-              <input
-                {...register("email", { required: true })}
-                className="bg-transparent border p-3 w-full"
-                placeholder="Email"
-                type="email"
-              />
-              {errors.email && (
-                <span className="text-red-500">Email is required</span>
-              )}
+              <div className="w-full grid gap-4">
+                <input
+                  {...register("name", { required: true })}
+                  className=" bg-transparent border p-3"
+                  placeholder="Name"
+                  type="text"
+                />
+                {errors.name && (
+                  <span className="text-red-500">Name is required</span>
+                )}
+              </div>
+              <div className=" w-full grid gap-4">
+                <input
+                  {...register("email", { required: true })}
+                  className="bg-transparent border p-3"
+                  placeholder="Email"
+                  type="email"
+                />
+                {errors.email && (
+                  <span className="text-red-500">Email is required</span>
+                )}
+              </div>
             </div>
             <textarea
               {...register("message", { required: true })}
@@ -113,11 +117,7 @@ const Contact = () => {
               rows={7}
             ></textarea>
             {errors.message && (
-              <>
-                <br />
-                <br />
-                <span className="text-red-500">Text message is required</span>
-              </>
+              <span className="text-red-500">Text message is required</span>
             )}
             <button className="bg-transparent p-2 border-2 w-24" type="submit">
               Send
