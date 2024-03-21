@@ -8,13 +8,11 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
           rel="stylesheet"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
           rel="stylesheet"
         />
         <meta
