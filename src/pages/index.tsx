@@ -8,7 +8,7 @@ import dev from "../assets/dev.json";
 export default function Home() {
   return (
     <motion.main
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.3 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >

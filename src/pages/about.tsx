@@ -11,7 +11,7 @@ const About = () => {
   return (
     <motion.div
       className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.3}}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
