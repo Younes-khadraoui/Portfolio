@@ -5,10 +5,10 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.3 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
+      exit={{ opacity: 0.3 }}
+      transition={{ duration: 1 }}
       className="flex gap-2 items-center justify-center py-8 lg:absolute lg:left-0 lg:top-0 lg:flex-col lg:p-4 lg:h-screen lg:w-20 lg:gap-10 "
     >
       <div className=" flex gap-2 lg:transform lg:rotate-90 lg:pr-6 text-2xl lg:text-lg font-bold xl:text-2xl">

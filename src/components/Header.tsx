@@ -17,10 +17,10 @@ const Header = () => {
   return (
     <motion.div
       className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus"
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0.3 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0.3 }}
+      transition={{ duration: 1 }}
     >
       <Link href="/" className="text-4xl sm:text-5xl z-20 || xl:text-6xl">
         <motion.p
