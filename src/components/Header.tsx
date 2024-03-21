@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <motion.div
-      className="Header flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus"
+      className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}

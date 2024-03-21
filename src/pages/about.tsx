@@ -11,20 +11,20 @@ const About = () => {
   return (
     <motion.div
       className="pt-20 p-10 flex flex-col gap-16 lg:px-40 lg:pt-0 lg:h-screen lg:justify-center"
-      initial={{ opacity: 0.3}}
+      initial={{ opacity: 0.3 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       <Head>
         <title>About</title>
       </Head>
-      <div className="Title">
+      <div>
         <h1 className="text-5xl mb-4 py-8 font-marcellus ">About</h1>
         <hr className="lg:w-1/2" />
       </div>
       {/* My description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="descreption">
+        <div>
           <p className="title text-3xl py-6 font-marcellus || xl:text-4xl">
             My Description
           </p>

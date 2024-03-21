@@ -53,14 +53,14 @@ const Contact = () => {
       <Head>
         <title>Contact</title>
       </Head>
-      <div className="Title">
+      <div>
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Contact Me</h1>
         <hr className="lg:w-1/2" />
       </div>
       <div className="Main grid lg:grid-cols-3 gap-4">
         <div className="left-col flex flex-col gap-10 pb-14 ">
           <p className="text-3xl font-marcellus">Get in touch</p>
-          <div className="Email flex gap-2">
+          <div className=" flex gap-2">
             <p className="font-bold">Email:</p>
             <a
               className="border-b"
@@ -69,7 +69,7 @@ const Contact = () => {
               younes.khadraoui.pro@gmail.com
             </a>
           </div>
-          <div className="Phone flex gap-2">
+          <div className="flex gap-2">
             <p className="font-bold">Phone: </p>
             <p>(+213) 781 041 216</p>
           </div>

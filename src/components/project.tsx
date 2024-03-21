@@ -10,7 +10,7 @@ const Project = ({ preview, name, tech, git, href }) => {
         src={preview}
         alt="my weather website"
       />
-      <div className="content opacity-0 hover:opacity-100 transition-opacity duration-500 absolute inset-0 m-6 p-2 pt-4 bg-black bg-opacity-60  flex flex-col justify-center gap-4 ">
+      <div className=" opacity-0 hover:opacity-100 transition-opacity duration-500 absolute inset-0 m-6 p-2 pt-4 bg-black bg-opacity-60  flex flex-col justify-center gap-4 ">
         <p className="text-center font-marcellus text-2xl || xl:text-3xl">
           {name}
         </p>

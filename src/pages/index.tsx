@@ -15,19 +15,19 @@ export default function Home() {
       <Head>
         <title>Younes</title>
       </Head>
-      <div className="pointer-events pt-6 || md:pt-0 || lg:h-screen lg:grid lg:grid-cols-2">
+      <div className="pointer-events pt-6  md:pt-0  lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
         <div className="order-2 flex items-center justify-center min-h-[500px]">
           <Lottie animationData={dev} loop={true} />
         </div>
         {/*  the text part   */}
-        <div className="md:pl-32 || lg:flex lg:flex-col lg:justify-center lg:pl-16 || xl:pl-36">
+        <div className="md:pl-32 lg:flex lg:flex-col lg:justify-center lg:pl-16 xl:pl-36">
           {/*  the titles */}
           <div className="p-5">
-            <h1 className="text-2xl font-bold font-marcellus || lg:text-3xl || xl:text-4xl">
+            <h1 className="text-2xl font-bold font-marcellus lg:text-3xl xl:text-4xl">
               I am Younes Khadraoui
             </h1>
-            <h2 className="text-3xl font-bold font-marcellus || lg:text-4xl  || xl:text-5xl">
+            <h2 className="text-3xl font-bold font-marcellus lg:text-4xl  xl:text-5xl">
               I am a web developer
             </h2>
           </div>
@@ -38,15 +38,15 @@ export default function Home() {
                 <Quote />
               </div>
               <div>
-                <p className="text-lg  || lg:text-2xl || xl:text-3xl">
+                <p className="text-lg  lg:text-2xl xl:text-3xl">
                   Creativity is intelligence having fun
                 </p>
-                <p className="font-bold text-blue-400 || xl:text-lg">
+                <p className="font-bold text-blue-400 xl:text-lg">
                   - Albert Einstein
                 </p>
               </div>
             </div>
-            <p className="pt-4 || xl:text-lg">
+            <p className="pt-4 xl:text-lg">
               Hello, cyber travelers! Buckle up for a whimsical ride through my
               digital universe!
             </p>

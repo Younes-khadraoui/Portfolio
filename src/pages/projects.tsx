@@ -16,7 +16,7 @@ const Projects = () => {
       <Head>
         <title>Projects</title>
       </Head>
-      <div className="Title">
+      <div>
         <h1 className="text-5xl mb-4 py-8 font-marcellus">Projects</h1>
         <hr className="lg:w-1/2" />
       </div>
