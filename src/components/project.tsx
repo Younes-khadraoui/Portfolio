@@ -6,6 +6,7 @@ const Project = ({ preview, name, tech, git, href }) => {
   return (
     <div className="relative bg-white">
       <Image
+        placeholder="blur"
         className="border-8 border-white"
         src={preview}
         alt="my weather website"

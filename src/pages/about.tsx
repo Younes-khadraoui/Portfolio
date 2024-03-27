@@ -33,6 +33,7 @@ const About = () => {
               className="border-4 h-64 object-scale-down bg-white"
               src={me}
               alt="my picture"
+              placeholder="blur"
             />
             <ul className="flex flex-col gap-6 || xl:text-lg">
               <li>
