@@ -2,10 +2,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import Head from "next/head";
-import Lottie from "lottie-react";
 import dev from "../assets/dev.json";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+  const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
   return (
     <motion.main
       initial={{ opacity: 0.3 }}
@@ -16,13 +17,10 @@ export default function Home() {
         <title>Younes</title>
       </Head>
       <div className="pointer-events pt-6  md:pt-0  lg:h-screen lg:grid lg:grid-cols-2">
-        {/*  the dev animation  */}
-        <div className="order-2 flex items-center justify-center min-h-[500px]">
-          <Lottie animationData={dev} loop={true} />
+        <div className="order-2 flex items-center justify-center min-h-[350px] sm:min-h-[500px]">
+          <DynamicLottie animationData={dev} loop={true} />
         </div>
-        {/*  the text part   */}
         <div className="md:pl-32 lg:flex lg:flex-col lg:justify-center lg:pl-16 xl:pl-36">
-          {/*  the titles */}
           <div className="p-5">
             <h1 className="text-2xl font-bold font-marcellus lg:text-3xl xl:text-4xl">
               I am Younes Khadraoui
@@ -31,7 +29,6 @@ export default function Home() {
               I am a web developer
             </h2>
           </div>
-          {/*  the quote and buttons   */}
           <div className="p-5">
             <div className="flex gap-2">
               <div className="pt-1">

@@ -22,7 +22,6 @@ const About = () => {
         <h1 className="text-5xl mb-4 py-8 font-marcellus ">About</h1>
         <hr className="lg:w-1/2" />
       </div>
-      {/* My description */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div>
           <p className="title text-3xl py-6 font-marcellus || xl:text-4xl">
@@ -48,7 +47,6 @@ const About = () => {
             </ul>
           </div>
         </div>
-        {/* My Skills */}
         <div className="mt-16 lg:mt-0">
           <p className="text-3xl py-6 font-marcellus || xl:text-4xl">
             My Skills
