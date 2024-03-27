@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <div className="pointer-events pt-6  md:pt-0  lg:h-screen lg:grid lg:grid-cols-2">
         {/*  the dev animation  */}
-        <div className="order-2 flex items-center justify-center min-h-fit">
+        <div className="order-2 flex items-center justify-center min-h-[500px]">
           <Lottie animationData={dev} loop={true} />
         </div>
         {/*  the text part   */}
