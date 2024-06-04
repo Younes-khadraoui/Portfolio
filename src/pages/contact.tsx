@@ -4,7 +4,6 @@ import { useForm, FieldValues } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Head from "next/head";
-import { motion } from "framer-motion";
 
 const schema = z.object({
   name: z.string().min(3),
@@ -44,12 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div
-      className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center"
-      initial={{ opacity: 0.3 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <div className="pt-20 p-10 flex flex-col gap-24 lg:px-40 lg:h-screen lg:justify-center">
       <Head>
         <title>Contact</title>
       </Head>
@@ -126,7 +120,7 @@ const Contact = () => {
         </div>
       </div>
       <ToastContainer position="top-center" theme="dark" />
-    </motion.div>
+    </div>
   );
 };
 

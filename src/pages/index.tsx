@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import Head from "next/head";
@@ -8,11 +7,7 @@ import dynamic from "next/dynamic";
 export default function Home() {
   const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
   return (
-    <motion.main
-      initial={{ opacity: 0.3 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
+    <main>
       <Head>
         <title>Younes</title>
       </Head>
@@ -58,6 +53,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    </motion.main>
+    </main>
   );
 }

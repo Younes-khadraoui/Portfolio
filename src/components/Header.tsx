@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
@@ -14,32 +13,33 @@ const Header = () => {
     }`,
   };
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 1024px)");
+
+    const handleMediaQueryChange = (e: any) => {
+      if (e.matches) {
+        setToggled(false);
+        setIcon(true);
+      }
+    };
+
+    handleMediaQueryChange(mediaQuery);
+
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  });
+
   return (
-    <motion.div
-      className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus"
-      initial={{ opacity: 0.3 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0.3 }}
-      transition={{ duration: 1 }}
-    >
-      <Link href="/" className="text-4xl sm:text-5xl z-20 || xl:text-6xl">
-        <motion.p
-          whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.3 }}
-          className="font-tinos outline-none hover:text-[#42A5F5]"
-        >
-          <span>Y</span>
-          <span className="hover:text-white">ounes</span>
-        </motion.p>
+    <div className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus">
+      <Link href="/" className="text-4xl sm:text-4xl z-20 || xl:text-4xl">
+        <p className="outline-none font-bold">Younes</p>
       </Link>
 
       <ul className={navStyle.className}>
-        <motion.li
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 0.3,
-          }}
+        <li
           onClick={() => {
             toggled ? setToggled(false) : null;
             setIcon(Icon == false ? true : false);
@@ -48,13 +48,8 @@ const Header = () => {
           <Link href="/" className="xl:text-3xl">
             Home
           </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 0.3,
-          }}
+        </li>
+        <li
           onClick={() => {
             toggled ? setToggled(false) : null;
             setIcon(Icon == false ? true : false);
@@ -63,13 +58,8 @@ const Header = () => {
           <Link href="/projects" className="xl:text-3xl">
             Projects
           </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 0.3,
-          }}
+        </li>
+        <li
           onClick={() => {
             toggled ? setToggled(false) : null;
             setIcon(Icon == false ? true : false);
@@ -78,13 +68,8 @@ const Header = () => {
           <Link href="/about" className="xl:text-3xl">
             About
           </Link>
-        </motion.li>
-        <motion.li
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 0.3,
-          }}
+        </li>
+        <li
           onClick={() => {
             toggled ? setToggled(false) : null;
             setIcon(Icon == false ? true : false);
@@ -93,24 +78,22 @@ const Header = () => {
           <Link href="/contact" className="xl:text-3xl">
             Contact
           </Link>
-        </motion.li>
+        </li>
       </ul>
 
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{
-          duration: 0.3,
-        }}
+      <button
         className="flex justify-end z-20 || lg:hidden"
         onClick={() => {
+          console.log("icon = ", Icon);
+          console.log("toggled = ", toggled);
+          console.log("--------------------");
           setToggled(!toggled);
           setIcon(Icon == false ? true : false);
         }}
       >
         {Icon ? <Menu size={45} /> : <X size={45} />}
-      </motion.button>
-    </motion.div>
+      </button>
+    </div>
   );
 };
 
