@@ -3,6 +3,7 @@ import plants from "@/assets/plants.png";
 import weather from "@/assets/weather.png";
 import Project from "@/components/project";
 import books from "@/assets/books.png";
+import dzflavor from "@/assets/dzflavor.png";
 import Head from "next/head";
 
 const Myprojects = () => {
@@ -18,11 +19,11 @@ const Myprojects = () => {
 
       <div className="grid lg:grid-cols-3 gap-4">
         <Project
-          preview={plants}
-          name="plants kingdom"
-          tech="ReactJs Typescript"
-          git="Plant-store"
-          href="https://plants-kingdom.vercel.app/"
+          preview={dzflavor}
+          name="DZFlavor"
+          tech="ReactJs ExpressJs MongoDB"
+          git="DZ-FLAVOR"
+          href="https://dzflavor.vercel.app/"
         />
         <Project
           preview={weather}
@@ -37,6 +38,13 @@ const Myprojects = () => {
           tech="Qwik"
           git="First_Chapter"
           href="https://firstchapter.pages.dev/"
+        />
+        <Project
+          preview={plants}
+          name="plants kingdom"
+          tech="ReactJs Typescript"
+          git="Plant-store"
+          href="https://plants-kingdom.vercel.app/"
         />
       </div>
     </div>
