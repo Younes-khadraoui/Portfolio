@@ -23,7 +23,7 @@ const Myprojects = () => {
           name="DZFlavor"
           tech="ReactJs ExpressJs MongoDB"
           git="DZ-FLAVOR"
-          href="https://dzflavor.vercel.app/"
+          href="https://firstchapter.netlify.app/"
         />
         <Project
           preview={weather}
