@@ -34,8 +34,9 @@ const About = () => {
                 and I am a computer science student at the USTHB
               </li>
               <li>
-                I am also a junior front-end developer . I like development
-                because of the satisfaction I get from overcoming challenges
+                I am also a Full stack developer and data engineer intern . I
+                like development because of the satisfaction I get from
+                overcoming challenges
               </li>
               <li>I am very motivated to improve my knowledge and skills.</li>
             </ul>
