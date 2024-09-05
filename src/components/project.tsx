@@ -17,7 +17,6 @@ const Project = ({ preview, name, tech, git, href }: {preview : StaticImageData 
         <p className="text-center font-marcellus text-2xl || xl:text-3xl">
           {name}
         </p>
-        <p className="font-bold text-center || xl:text-xl">{tech}</p>
         <div className="flex gap-2 justify-center flex-wrap">
           {
             tech.map((skill) => <Skill key={skill} skill={skill} />)
