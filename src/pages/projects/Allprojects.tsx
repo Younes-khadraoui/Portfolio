@@ -26,7 +26,7 @@ const Allprojects = () => {
           preview={qrcode}
           name="Qr code generator"
           tech="reactJs javascript"
-          git="Qr code generator"
+          git=""
           href="https://registration-form-one-fawn.vercel.app/"
         />
         <Project
