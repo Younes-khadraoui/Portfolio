@@ -60,7 +60,7 @@ const About = () => {
               <Skill skill="ReactJs/NextJs"/>
               <Skill skill="Golang"/>
               <Skill skill="Htmx"/>
-              <Skill skill="Tailwindcss"/>
+              <Skill skill="Tailwindcwss"/>
               <Skill skill="AlpineJs"/>
             </div>
           </div>

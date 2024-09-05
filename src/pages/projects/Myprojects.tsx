@@ -6,6 +6,7 @@ import books from "@/assets/projects/books.png";
 import dzflavor from "@/assets/projects/dzflavor.png";
 import Head from "next/head";
 
+
 const Myprojects = () => {
   return (
     <div className="pt-20 p-10 flex flex-col gap-24 lg:pt-24 lg:px-40 lg:justify-center">
@@ -21,28 +22,28 @@ const Myprojects = () => {
         <Project
           preview={dzflavor}
           name="DZFlavor"
-          tech="ReactJs ExpressJs MongoDB"
+          tech={["ReactJs", "ExpressJs", "MongoDB"]}
           git="DZ-FLAVOR"
           href="https://dzflavor.vercel.app/"
         />
         <Project
           preview={weather}
           name="Weather Cast"
-          tech="NextJs RestApi"
+          tech={["NextJs", "RestApi"]}
           git="weather-cast"
           href="https://weathercasts.vercel.app/"
         />
         <Project
           preview={books}
           name="First Chapter"
-          tech="Qwik"
+          tech={["Qwik", "Google Api"]}
           git="First_Chapter"
           href="https://firstchapter.netlify.app/"
         />
         <Project
           preview={plants}
           name="plants kingdom"
-          tech="ReactJs Typescript"
+          tech={["ReactJs", "Typescript"]}
           git="Plant-store"
           href="https://plants-kingdom.vercel.app/"
         />

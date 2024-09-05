@@ -18,21 +18,21 @@ const Allprojects = () => {
         <Project
           preview={wadjed}
           name="Wadjed"
-          tech="Golang HTMX AlpineJs Tailwindcss"
+          tech={["Golang", "HTMX", "AlpineJs", "Tailwindcss"]}
           git=""
           href="https://wadjed.com"
         />
         <Project
           preview={qrcode}
           name="Qr code generator"
-          tech="reactJs javascript"
+          tech={["reactJs", "javascript"]}
           git=""
           href="https://registration-form-one-fawn.vercel.app/"
         />
         <Project
           preview={icarus}
           name="Nasa Icarus"
-          tech="Js vanillaCSS"
+          tech={["javascript" , "vanillaCSS"]}
           git="icarus"
           href="https://icarusnasa.netlify.app/#3"
         />

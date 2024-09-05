@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
+import Skill from "@/components/ui/skill";
+import type { StaticImageData } from 'next/image';
 
-const Project = ({ preview, name, tech, git, href }) => {
+const Project = ({ preview, name, tech, git, href }: {preview : StaticImageData , name: string, tech: string[], git: string, href : string }) => {
   return (
     <div className="relative bg-white">
       <Image
@@ -16,6 +18,11 @@ const Project = ({ preview, name, tech, git, href }) => {
           {name}
         </p>
         <p className="font-bold text-center || xl:text-xl">{tech}</p>
+        <div className="flex gap-2 justify-center flex-wrap">
+          {
+            tech.map((skill) => <Skill key={skill} skill={skill} />)
+          }
+        </div>
         <div className="flex gap-4 justify-center">
           <div className="flex gap-1">
             {git == '' ? <p className="px-2 py-1 ">Private Repo </p> : 
