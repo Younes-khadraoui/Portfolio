@@ -30,15 +30,6 @@ const Footer = () => {
             <Linkedin />
           </Link>
         </li>
-        <li>
-          <Link
-            href="https://discord.com/users/younes_khadraoui"
-            target="_blank"
-            title="Discord"
-          >
-            <MessageCircle />
-          </Link>
-        </li>
       </ul>
     </div>
   );

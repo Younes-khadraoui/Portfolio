@@ -1,9 +1,9 @@
 import React from "react";
-import plants from "@/assets/plants.png";
-import weather from "@/assets/weather.png";
+import plants from "@/assets/projects/plants.png";
+import weather from "@/assets/projects/weather.png";
 import Project from "@/components/project";
-import books from "@/assets/books.png";
-import dzflavor from "@/assets/dzflavor.png";
+import books from "@/assets/projects/books.png";
+import dzflavor from "@/assets/projects/dzflavor.png";
 import Head from "next/head";
 
 const Myprojects = () => {

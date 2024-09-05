@@ -1,6 +1,7 @@
 import React from "react";
-import qrcode from "@/assets/qrcode.png";
-import icarus from "@/assets/icarus.png";
+import qrcode from "@/assets/projects/qrcode.png";
+import icarus from "@/assets/projects/icarus.png";
+import wadjed from "@/assets/projects/wadjed.png";
 import Project from "@/components/project";
 
 const Allprojects = () => {
@@ -14,6 +15,13 @@ const Allprojects = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-4">
+        <Project
+          preview={wadjed}
+          name="Wadjed"
+          tech="Golang HTMX AlpineJs Tailwindcss"
+          git=""
+          href="https://wadjed.com"
+        />
         <Project
           preview={qrcode}
           name="Qr code generator"

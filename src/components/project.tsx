@@ -18,13 +18,15 @@ const Project = ({ preview, name, tech, git, href }) => {
         <p className="font-bold text-center || xl:text-xl">{tech}</p>
         <div className="flex gap-4 justify-center">
           <div className="flex gap-1">
-            <a
-              className="hover:underline px-2 py-1 || xl:text-lg"
-              href={`https://github.com/Younes-khadraoui/${git}/`}
-              target="_blank"
-            >
-              Code
-            </a>
+            {git == '' ? <p className="px-2 py-1 ">Private Repo </p> : 
+              <a
+                className="hover:underline px-2 py-1 || xl:text-lg"
+                href={`https://github.com/Younes-khadraoui/${git}/`}
+                target="_blank"
+              >
+                Code
+              </a>
+            }
             <Github className="pt-1" />
           </div>
           <div className="flex gap-1">

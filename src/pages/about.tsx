@@ -1,10 +1,7 @@
 import me from "../assets/me.jpg";
-import html from "../assets/html.png";
-import ts from "../assets/ts.png";
-import react from "../assets/react.png";
-import tailwind from "../assets/tailwind.png";
 import Image from "next/image";
 import Head from "next/head";
+import Skill from "@/components/ui/skill";
 
 const About = () => {
   return (
@@ -58,11 +55,13 @@ const About = () => {
                 you can find about in my linkedin profile
               </li>
             </ul>
-            <div className="flex h-16 justify-around flex-wrap gap-4">
-              <Image className="w-16" src={html} alt="HTML" />
-              <Image className="w-16" src={react} alt="react js" />
-              <Image className="w-16" src={ts} alt="typesctipt" />
-              <Image className="w-16" src={tailwind} alt="tailwind css" />
+            <div className="flex flex-wrap gap-2">
+              <Skill skill="Javascript/typescript"/>
+              <Skill skill="ReactJs/NextJs"/>
+              <Skill skill="Golang"/>
+              <Skill skill="Htmx"/>
+              <Skill skill="Tailwindcss"/>
+              <Skill skill="AlpineJs"/>
             </div>
           </div>
         </div>
