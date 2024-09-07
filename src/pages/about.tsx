@@ -1,4 +1,4 @@
-import me from "../assets/me.jpg";
+import me from "../assets/me2.jpg";
 import Image from "next/image";
 import Head from "next/head";
 import Skill from "@/components/ui/skill";
@@ -20,7 +20,7 @@ const About = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6">
             <Image
-              className="border-4 h-64 object-scale-down bg-white"
+              className="border-4 w-fit h-64 object-scale-down bg-white"
               src={me}
               alt="my picture"
               placeholder="blur"
