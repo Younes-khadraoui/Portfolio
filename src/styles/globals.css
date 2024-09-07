@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for WebKit-based browsers (Chrome, Safari, etc.) */
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
 body {
   margin: 0;
   color: white;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial",
-    "Lucida Grande";
+  font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande";
   min-height: 100vh;
   background-color: #0c0c0c;
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
 }

@@ -32,6 +32,18 @@ const Header = () => {
     };
   });
 
+  useEffect(() => {
+    if (toggled) {
+      document.body.style.overflow = 'hidden';  
+    } else {
+      document.body.style.overflow = 'auto';    
+    }
+    
+    return () => {
+      document.body.style.overflow = 'auto';    
+    };
+  }, [toggled]);
+
   return (
     <div className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus">
       <Link href="/" className="text-4xl sm:text-4xl z-20 || xl:text-4xl">
