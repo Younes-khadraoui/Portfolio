@@ -19,13 +19,13 @@ const Myprojects = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-4">
-        <Project
+        {/* <Project
           preview={dzflavor}
           name="DZFlavor"
           tech={["ReactJs", "ExpressJs", "MongoDB"]}
           git="DZ-FLAVOR"
           href="https://dzflavor.vercel.app/"
-        />
+        /> */}
         <Project
           preview={weather}
           name="Weather Cast"
