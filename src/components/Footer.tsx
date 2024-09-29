@@ -1,4 +1,4 @@
-import { Minus, Github, Linkedin, MessageCircle } from "lucide-react";
+import { Minus, Github, Linkedin, Instagram } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -28,6 +28,15 @@ const Footer = () => {
             title="Linkedin"
           >
             <Linkedin />
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="https://www.instagram.com/younes_khx_/"
+            target="_blank"
+            title="Linkedin"
+          >
+            <Instagram />
           </Link>
         </li>
       </ul>
