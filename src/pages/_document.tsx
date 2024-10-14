@@ -24,6 +24,7 @@ export default function Document() {
           content="Younes Khadraoui, web developer, portfolio"
         />
         <meta name="author" content="Younes Khadraoui" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body>
         <Main />
