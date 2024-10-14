@@ -22,10 +22,10 @@ const Project = ({ preview, name, tech, git, href }: { preview: StaticImageData,
             {tech.map((skill) => <Skill key={skill} skill={skill} />)}
           </div>
           <div className="flex gap-4 justify-center">
-            <div className="flex gap-1">
+            <div className="flex gap-1 items-center">
               {git === '' ? <p className="px-2 py-1 text-red-500">Private Repo</p> :
                 <a
-                  className="hover:underline px-2 py-1 xl:text-lg"
+                  className="hover:underline hover:font-bold px-2 py-1 xl:text-lg"
                   href={`https://github.com/Younes-khadraoui/${git}/`}
                   target="_blank"
                 >
@@ -34,9 +34,9 @@ const Project = ({ preview, name, tech, git, href }: { preview: StaticImageData,
               }
               <Github className="pt-1" />
             </div>
-            <div className="flex gap-1">
+            <div className="flex gap-1 items-center">
               <a
-                className="hover:underline px-2 py-1 xl:text-lg"
+                className="hover:underline hover:font-bold px-2 py-1 xl:text-lg"
                 href={href}
                 target="_blank"
               >

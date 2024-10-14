@@ -4,7 +4,7 @@ import Head from "next/head";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Head>
         <title>Projects</title>
       </Head>
