@@ -14,7 +14,7 @@ const Allprojects = () => {
         <hr className="lg:w-1/2" />
       </div>
 
-      <div className="grid lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] xl:grid-cols-3 gap-5 ">
         <Project
           preview={wadjed}
           name="Wadjed"

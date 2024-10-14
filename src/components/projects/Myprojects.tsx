@@ -3,8 +3,6 @@ import plants from "@/assets/projects/plants.png";
 import weather from "@/assets/projects/weather.png";
 import Project from "@/components/project";
 import books from "@/assets/projects/books.png";
-import dzflavor from "@/assets/projects/dzflavor.png";
-
 
 const Myprojects = () => {
   return (
@@ -13,15 +11,8 @@ const Myprojects = () => {
         <h1 className="text-5xl mb-4 py-8 font-marcellus">My Projects</h1>
         <hr className="lg:w-1/2" />
       </div>
-
-      <div className="grid lg:grid-cols-3 gap-4">
-        {/* <Project
-          preview={dzflavor}
-          name="DZFlavor"
-          tech={["ReactJs", "ExpressJs", "MongoDB"]}
-          git="DZ-FLAVOR"
-          href="https://dzflavor.vercel.app/"
-        /> */}
+ 
+      <div className="grid grid-cols-[repeat(auto-fill,minmax(450px,1fr))] xl:grid-cols-3 gap-5 ">
         <Project
           preview={weather}
           name="Weather Cast"
