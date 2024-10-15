@@ -24,8 +24,8 @@ const Myprojects = () => {
           preview={books}
           name="First Chapter"
           tech={["Qwik", "Google Api"]}
-          git="First_Chapter"
-          href="https://firstchapter.netlify.app/"
+          git="First_chapter"
+          href="https://first-chapter.pages.dev/"
         />
         <Project
           preview={plants}
