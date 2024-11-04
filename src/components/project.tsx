@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import ExternalLink from "@/assets/link.png";
+import Github from "@/assets/socials/github.png";
 import Skill from "@/components/ui/skill";
 import type { StaticImageData } from 'next/image';
 
@@ -21,7 +22,7 @@ const Project = ({ preview, name, tech, git, href }: { preview: StaticImageData,
           <div className="flex gap-2 justify-center flex-wrap">
             {tech.map((skill) => <Skill key={skill} skill={skill} />)}
           </div>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center items-center">
             <div className="flex gap-1 items-center">
               {git === '' ? <p className="px-2 py-1 text-red-500">Private Repo</p> :
                 <a
@@ -32,9 +33,9 @@ const Project = ({ preview, name, tech, git, href }: { preview: StaticImageData,
                   Code
                 </a>
               }
-              <Github className="pt-1" />
+              <Image src={Github} alt="github icon" width={25} height={25} className="transition-transform ease-in duration-200 hover:scale-110 pt-1" />
             </div>
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-1 items-center justify-center">
               <a
                 className="hover:underline hover:font-bold px-2 py-1 xl:text-lg"
                 href={href}
@@ -42,7 +43,7 @@ const Project = ({ preview, name, tech, git, href }: { preview: StaticImageData,
               >
                 Live preview
               </a>
-              <ExternalLink className="pt-1" />
+              <Image src={ExternalLink} alt="external link icon" width={30} height={30} className="transition-transform ease-in duration-200 hover:scale-110" />
             </div>
           </div>
       </div>

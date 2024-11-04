@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Quote } from "lucide-react";
 import Head from "next/head";
-import dev from "../assets/dev.json";
+import dev from "@/assets/dev.json";
 import dynamic from "next/dynamic";
 
 export default function Home() {
@@ -42,12 +42,12 @@ export default function Home() {
               Hello, cyber travelers! Buckle up for a whimsical ride through my
               digital universe!
             </p>
-            <div className="py-5 ">
-              <button className="bg-white font-bold border-2 px-2 py-1 text-black  mr-5 cursor-default">
-                <Link href="/projects">My Projects</Link>
+            <div className="py-5">
+              <button className="transition-transform ease-in duration-200 hover:scale-110">
+                <Link className="bg-white font-bold border-2  px-2 py-2 rounded-md text-black mr-5" href="/projects">My Projects</Link>
               </button>
-              <button className="border-2 px-2 py-1 font-bold cursor-default">
-                <Link href="/contact">Contact Me</Link>
+              <button className="transition-transform ease-in duration-200 hover:scale-110">
+                <Link className="border-2 px-2 py-2  rounded-md font-bold" href="/contact">Contact Me</Link>
               </button>
             </div>
           </div>

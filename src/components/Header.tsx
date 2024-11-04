@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import Menu from "@/assets/header/menu.png";
+import X from "@/assets/header/close.png";
+import Image from "next/image";
 
 const Header = () => {
   const [toggled, setToggled] = useState(false);
@@ -32,22 +34,10 @@ const Header = () => {
     };
   });
 
-  useEffect(() => {
-    if (toggled) {
-      document.body.style.overflow = 'hidden';  
-    } else {
-      document.body.style.overflow = 'auto';    
-    }
-    
-    return () => {
-      document.body.style.overflow = 'auto';    
-    };
-  }, [toggled]);
-
   return (
     <div className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus">
       <Link href="/" className="text-4xl sm:text-4xl z-20 || xl:text-4xl">
-        <p className="outline-none font-bold">Younes</p>
+        <p className="outline-none font-bold transition-transform ease-in duration-200 hover:scale-110">Younes</p>
       </Link>
 
       <ul className={navStyle.className}>
@@ -57,9 +47,11 @@ const Header = () => {
             setIcon(Icon == false ? true : false);
           }}
         >
-          <Link href="/" className="xl:text-3xl">
-            Home
-          </Link>
+          <button className="transition-transform ease-in duration-200 hover:scale-110">
+            <Link href="/" className="xl:text-3xl ">
+              Home
+            </Link>
+          </button>
         </li>
         <li
           onClick={() => {
@@ -67,9 +59,11 @@ const Header = () => {
             setIcon(Icon == false ? true : false);
           }}
         >
-          <Link href="/projects" className="xl:text-3xl">
-            Projects
-          </Link>
+          <button className="transition-transform ease-in duration-200 hover:scale-110">
+            <Link href="/projects" className="xl:text-3xl ">
+              Projects
+            </Link>
+          </button>
         </li>
         <li
           onClick={() => {
@@ -77,9 +71,11 @@ const Header = () => {
             setIcon(Icon == false ? true : false);
           }}
         >
-          <Link href="/about" className="xl:text-3xl">
-            About
-          </Link>
+          <button className="transition-transform ease-in duration-200 hover:scale-110">
+            <Link href="/about" className="xl:text-3xl ">
+              About
+            </Link>
+          </button>
         </li>
         <li
           onClick={() => {
@@ -87,9 +83,11 @@ const Header = () => {
             setIcon(Icon == false ? true : false);
           }}
         >
-          <Link href="/contact" className="xl:text-3xl">
-            Contact
-          </Link>
+          <button className="transition-transform ease-in duration-200 hover:scale-110">
+            <Link href="/contact" className="xl:text-3xl ">
+              Contact
+            </Link>
+          </button>
         </li>
       </ul>
 
@@ -103,7 +101,7 @@ const Header = () => {
           setIcon(Icon == false ? true : false);
         }}
       >
-        {Icon ? <Menu size={45} /> : <X size={45} />}
+        <Image className="transition-transform ease-in duration-200 hover:scale-105 outline-none" height={30} width={30} src={Icon ? Menu : X} alt="Menu icon" />
       </button>
     </div>
   );

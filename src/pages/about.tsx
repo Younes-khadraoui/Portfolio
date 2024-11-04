@@ -1,4 +1,4 @@
-import me from "../assets/me2.jpg";
+import me from "@/assets/me.jpg";
 import Image from "next/image";
 import Head from "next/head";
 import Skill from "@/components/ui/skill";
