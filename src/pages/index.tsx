@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { Quote } from "lucide-react";
 import Head from "next/head";
+import Image from "next/image";
 import dev from "@/assets/dev.json";
 import dynamic from "next/dynamic";
+import Chat from "@/assets/chat.png"
 
 export default function Home() {
   const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
@@ -27,7 +28,7 @@ export default function Home() {
           <div className="p-5">
             <div className="flex gap-2">
               <div className="pt-1">
-                <Quote />
+                <Image src={Chat} alt="chat icon" width={30} height={30} />
               </div>
               <div>
                 <p className="text-lg  lg:text-2xl xl:text-3xl">
