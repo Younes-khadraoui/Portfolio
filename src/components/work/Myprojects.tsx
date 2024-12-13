@@ -1,8 +1,8 @@
 import React from "react";
-import plants from "@/assets/projects/plants.png";
-import weather from "@/assets/projects/weather.png";
+import plants from "@/assets/work/plants.png";
+import weather from "@/assets/work/weather.png";
+import books from "@/assets/work/books.png";
 import Project from "@/components/project";
-import books from "@/assets/projects/books.png";
 
 const Myprojects = () => {
   return (

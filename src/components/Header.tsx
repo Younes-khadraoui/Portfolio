@@ -37,7 +37,9 @@ const Header = () => {
   return (
     <div className=" flex absolute w-full justify-between items-center px-3 z-10 py-4 lg:px-4 font-marcellus">
       <Link href="/" className="text-4xl sm:text-4xl z-20 || xl:text-4xl">
-        <p className="outline-none font-bold transition-transform ease-in duration-200 hover:scale-110">Younes</p>
+        <p className="outline-none font-bold transition-transform ease-in duration-200 hover:scale-110">
+          Younes
+        </p>
       </Link>
 
       <ul className={navStyle.className}>
@@ -60,8 +62,8 @@ const Header = () => {
           }}
         >
           <button className="transition-transform ease-in duration-200 hover:scale-110">
-            <Link href="/projects" className="xl:text-3xl ">
-              Projects
+            <Link href="/work" className="xl:text-3xl ">
+              Work
             </Link>
           </button>
         </li>
@@ -101,7 +103,13 @@ const Header = () => {
           setIcon(Icon == false ? true : false);
         }}
       >
-        <Image className="transition-transform ease-in duration-200 hover:scale-105 outline-none" height={30} width={30} src={Icon ? Menu : X} alt="Menu icon" />
+        <Image
+          className="transition-transform ease-in duration-200 hover:scale-105 outline-none"
+          height={30}
+          width={30}
+          src={Icon ? Menu : X}
+          alt="Menu icon"
+        />
       </button>
     </div>
   );
